@@ -1,5 +1,5 @@
 /*
- * metismenu - v2.4.0
+ * metismenu - v2.4.0-jt
  * A jQuery menu plugin
  * https://github.com/onokumus/metisMenu#readme
  *
@@ -136,7 +136,7 @@
         if($this.options.preventDefault){
           e.preventDefault();
         }
-        if(self.attr('aria-disabled') === 'true'){
+        if(self.attr('aria-disabled') === 'true' || self.parents('.mini-navbar').length > 0){
             return;
         }
         if ($parent.hasClass(activeClass) && !$this.options.doubleTapToGo) {
